@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="warp_wraith_2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0296311365934824 -0.0359804992514762 0.220662844298532"
+        rpy="0 0 0" />
+      <mass
+        value="1.50189939232014" />
+      <inertia
+        ixx="0.00622450272329675"
+        ixy="1.74947630049081E-09"
+        ixz="-2.10701359777179E-07"
+        iyy="0.00323294859115307"
+        iyz="-3.7596738649884E-05"
+        izz="0.00344502046709939" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_a0">
+    <inertial>
+      <origin
+        xyz="0.0851554150323779 -0.000985644105346323 0.0156474010989862"
+        rpy="0 0 0" />
+      <mass
+        value="0.0945275281675611" />
+      <inertia
+        ixx="2.68108619050537E-05"
+        ixy="6.16844655608466E-07"
+        ixz="2.79426647656862E-08"
+        iyy="2.67601703362095E-05"
+        iyz="6.544775934823E-14"
+        izz="4.81696474158725E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_a0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_a0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a0"
+    type="revolute">
+    <origin
+      xyz="-0.104027277448243 -0.0674801592553697 0.0850434044805583"
+      rpy="1.58073140775485 -0.897008194175245 -1.57079632679487" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_a0" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_a1">
+    <inertial>
+      <origin
+        xyz="-0.0641801217502795 0.0100514965462183 0.0454735508748932"
+        rpy="0 0 0" />
+      <mass
+        value="0.562440066950647" />
+      <inertia
+        ixx="0.000191507810151581"
+        ixy="-0.000103782743476049"
+        ixz="9.09682607776654E-06"
+        iyy="0.000928787940838491"
+        iyz="9.64583367844016E-08"
+        izz="0.00107987891209593" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_a1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_a1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a1"
+    type="revolute">
+    <origin
+      xyz="0.0842402878027697 0 0.0207128411733796"
+      rpy="0 0 1.46829224125804" />
+    <parent
+      link="link_a0" />
+    <child
+      link="link_a1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_a2">
+    <inertial>
+      <origin
+        xyz="-0.0621869127524817 -0.00552705431792738 0.0205147264394417"
+        rpy="0 0 0" />
+      <mass
+        value="0.0685863416505232" />
+      <inertia
+        ixx="1.06834942290554E-05"
+        ixy="-2.43901507191657E-05"
+        ixz="-1.1569259067077E-16"
+        iyy="0.000187721407972582"
+        iyz="8.44839449558267E-16"
+        izz="0.000197984783387763" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_a2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_a2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a2"
+    type="revolute">
+    <origin
+      xyz="-0.149843510036304 -0.00685000000000027 0.0747954230934475"
+      rpy="0 0 -1.47118068128164" />
+    <parent
+      link="link_a1" />
+    <child
+      link="link_a2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_b0">
+    <inertial>
+      <origin
+        xyz="-0.0321885997256861 -0.000985644081265447 0.015647401904695"
+        rpy="0 0 0" />
+      <mass
+        value="0.0945275302953737" />
+      <inertia
+        ixx="2.68108670729358E-05"
+        ixy="6.16844679723015E-07"
+        ixz="2.7942675354054E-08"
+        iyy="2.67601703037538E-05"
+        iyz="3.56011319484595E-14"
+        izz="4.81696512998512E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_b0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_b0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_b0"
+    type="revolute">
+    <origin
+      xyz="-0.104027277448242 0.0509098811166782 0.147749009502869"
+      rpy="1.57197600052135 1.19738690821815 -1.57079632679489" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_b0" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_b1">
+    <inertial>
+      <origin
+        xyz="-0.0641801231705247 0.0100514968993663 0.0447565752889498"
+        rpy="0 0 0" />
+      <mass
+        value="0.562440056806847" />
+      <inertia
+        ixx="0.000191507810639002"
+        ixy="-0.000103782745336979"
+        ixz="9.09682511695694E-06"
+        iyy="0.000928787936115065"
+        iyz="9.64586621746657E-08"
+        izz="0.00107987890748841" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_b1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_b1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_b1"
+    type="revolute">
+    <origin
+      xyz="-0.0331037270274367 0 0.0214298171890495"
+      rpy="0 0 1.58142473730066" />
+    <parent
+      link="link_b0" />
+    <child
+      link="link_b1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_b2">
+    <inertial>
+      <origin
+        xyz="-0.0621869127553146 -0.00552705432822193 0.0204008659699784"
+        rpy="0 0 0" />
+      <mass
+        value="0.0685863416471101" />
+      <inertia
+        ixx="1.0683494229303E-05"
+        ixy="-2.43901507190906E-05"
+        ixz="-1.22646284490197E-17"
+        iyy="0.000187721407972589"
+        iyz="9.7503921322133E-17"
+        izz="0.000197984783387152" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_b2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_b2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_b2"
+    type="revolute">
+    <origin
+      xyz="-0.149843510036304 -0.00685000000000036 0.0741923075481606"
+      rpy="0 0 -1.55127452538575" />
+    <parent
+      link="link_b1" />
+    <child
+      link="link_b2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_c0">
+    <inertial>
+      <origin
+        xyz="-0.0026450596828149 -0.000985643978436812 0.0156474007490965"
+        rpy="0 0 0" />
+      <mass
+        value="0.0945275341479533" />
+      <inertia
+        ixx="2.68108658797545E-05"
+        ixy="6.16845170873546E-07"
+        ixz="2.79426901820078E-08"
+        iyy="2.67601704791357E-05"
+        iyz="5.47535234883977E-15"
+        izz="4.81696515549168E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_c0"
+    type="revolute">
+    <origin
+      xyz="-0.10402727744823 -0.0489945873239055 0.323762251736388"
+      rpy="-1.60923250783394 -0.150189357021345 1.57079632679492" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c0" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_c1">
+    <inertial>
+      <origin
+        xyz="-0.0631717759361851 0.023574141186961 0.0661863921093232"
+        rpy="0 0 0" />
+      <mass
+        value="0.562440062977799" />
+      <inertia
+        ixx="0.000191507811171085"
+        ixy="-0.000103782745725335"
+        ixz="9.09682777984586E-06"
+        iyy="0.000928787939846355"
+        iyz="9.64576530445767E-08"
+        izz="0.00107987891160582" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_c1"
+    type="revolute">
+    <origin
+      xyz="0.01 0 0"
+      rpy="0 0 1.64522586966955" />
+    <parent
+      link="link_c0" />
+    <child
+      link="link_c1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_c2">
+    <inertial>
+      <origin
+        xyz="-0.0621869127368714 -0.00552705436414952 0.0246594917039899"
+        rpy="0 0 0" />
+      <mass
+        value="0.0685863416618641" />
+      <inertia
+        ixx="1.06834942281433E-05"
+        ixy="-2.43901507194157E-05"
+        ixz="5.0401573207712E-16"
+        iyy="0.00018772140797255"
+        iyz="-2.57824073357419E-15"
+        izz="0.000197984783389714" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_c2"
+    type="revolute">
+    <origin
+      xyz="-0.14883516311418 0.00667264431966189 0.0913634989992372"
+      rpy="0 0 -1.55391611901459" />
+    <parent
+      link="link_c1" />
+    <child
+      link="link_c2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_d0">
+    <inertial>
+      <origin
+        xyz="0.0898656069902324 -0.000985644074502738 -0.0156474019252055"
+        rpy="0 0 0" />
+      <mass
+        value="0.0945275295014819" />
+      <inertia
+        ixx="2.68108653895771E-05"
+        ixy="6.1684803780549E-07"
+        ixz="-2.79426616210086E-08"
+        iyy="2.67601700704808E-05"
+        iyz="1.92440575990147E-13"
+        izz="4.81696508861976E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_d0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_d0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_d0"
+    type="revolute">
+    <origin
+      xyz="0.128972722551749 -0.0645412314045171 0.0813625604967587"
+      rpy="1.83692480476642 -0.897008194175255 -1.57079632679488" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_d0" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_d1">
+    <inertial>
+      <origin
+        xyz="-0.0637011361313294 0.0100562502609663 -0.0692913526325608"
+        rpy="0 0 0" />
+      <mass
+        value="0.562612698314197" />
+      <inertia
+        ixx="0.000191686197213794"
+        ixy="-0.000103778222169564"
+        ixz="-1.56309527882212E-05"
+        iyy="0.000928780546148637"
+        iyz="-8.61009925542482E-07"
+        izz="0.00107968645804875" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_d1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_d1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_d1"
+    type="revolute">
+    <origin
+      xyz="0.0889504798737517 0 0.00263003664879348"
+      rpy="0 0.0073549450756267 1.47548058294527" />
+    <parent
+      link="link_d0" />
+    <child
+      link="link_d1" />
+    <axis
+      xyz="0.0073548787645821 0 -0.999972952513396" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_d2">
+    <inertial>
+      <origin
+        xyz="-0.0621869126307545 -0.00552705449810822 -0.0284422731923281"
+        rpy="0 0 0" />
+      <mass
+        value="0.0685863417643418" />
+      <inertia
+        ixx="1.06834942169983E-05"
+        ixy="-2.43901494955539E-05"
+        ixz="1.4768561536465E-15"
+        iyy="0.000187721407971641"
+        iyz="8.71257411919416E-15"
+        izz="0.000197984783405094" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_d2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_d2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_d2"
+    type="revolute">
+    <origin
+      xyz="-0.149177890483349 -0.00684999999999997 -0.091049011327668"
+      rpy="0.00726837582919546 -0.00112514539693943 -1.41721792443627" />
+    <parent
+      link="link_d1" />
+    <child
+      link="link_d2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_e0">
+    <inertial>
+      <origin
+        xyz="-0.032188599818986 -0.000985644030035517 -0.0156474017764181"
+        rpy="0 0 0" />
+      <mass
+        value="0.0945275314949536" />
+      <inertia
+        ixx="2.6810867107574E-05"
+        ixy="6.16848064025741E-07"
+        ixz="-2.79426877869017E-08"
+        iyy="2.67601701588019E-05"
+        iyz="9.99960265076773E-14"
+        izz="4.81696518042105E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_e0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_e0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_e0"
+    type="revolute">
+    <origin
+      xyz="0.128972722551758 0.05090988111665 0.147749009502955"
+      rpy="1.70614431296975 1.19738690821797 -1.57079632679487" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_e0" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_e1">
+    <inertial>
+      <origin
+        xyz="-0.0635697726933742 0.0100562505694181 -0.0871516549356823"
+        rpy="0 0 0" />
+      <mass
+        value="0.562612705016016" />
+      <inertia
+        ixx="0.000191686199169745"
+        ixy="-0.000103778219734676"
+        ixz="-1.56309555740133E-05"
+        iyy="0.000928780551323458"
+        iyz="-8.61009676866432E-07"
+        izz="0.00107968646410498" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_e1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_e1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_e1"
+    type="revolute">
+    <origin
+      xyz="-0.0331037270274255 0 0.0204908224331536"
+      rpy="0 0.00735494507562595 1.59472876158132" />
+    <parent
+      link="link_e0" />
+    <child
+      link="link_e1" />
+    <axis
+      xyz="0.00735487876458016 0 -0.999972952513396" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_e2">
+    <inertial>
+      <origin
+        xyz="-0.0621869127130935 -0.00552705444164869 -0.0401920174546539"
+        rpy="0 0 0" />
+      <mass
+        value="0.0685863417032414" />
+      <inertia
+        ixx="1.06834942237984E-05"
+        ixy="-2.43901494968995E-05"
+        ixz="1.3064801349875E-15"
+        iyy="0.000187721407972307"
+        iyz="7.30606235775123E-15"
+        izz="0.000197984783395934" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_e2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_e2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_e2"
+    type="revolute">
+    <origin
+      xyz="-0.149132944513714 -0.0068499999999998 -0.0971598875769893"
+      rpy="0.00735224708523333 0.000199199844672999 -1.59788294855717" />
+    <parent
+      link="link_e1" />
+    <child
+      link="link_e2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_f0">
+    <inertial>
+      <origin
+        xyz="-0.00264505988886438 -0.000985644015985387 -0.0156474016259414"
+        rpy="0 0 0" />
+      <mass
+        value="0.0945275333634757" />
+      <inertia
+        ixx="2.68108684539212E-05"
+        ixy="6.16848310888889E-07"
+        ixz="-2.79426631519512E-08"
+        iyy="2.67601699411644E-05"
+        iyz="1.80487391364968E-13"
+        izz="4.81696529681402E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_f0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_f0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_f0"
+    type="revolute">
+    <origin
+      xyz="0.128972722552064 -0.0489945873239008 0.323762251736388"
+      rpy="-1.37984735461858 -0.150189357021352 1.57079632679493" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_f0" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_f1">
+    <inertial>
+      <origin
+        xyz="-0.0639381099820117 0.0100562504609399 -0.0370724769333189"
+        rpy="0 0 0" />
+      <mass
+        value="0.56261269611489" />
+      <inertia
+        ixx="0.000191686199524715"
+        ixy="-0.000103778217829883"
+        ixz="-1.56309544621578E-05"
+        iyy="0.000928780549032268"
+        iyz="-8.61009758026265E-07"
+        izz="0.00107968646249954" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_f1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_f1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_f1"
+    type="revolute">
+    <origin
+      xyz="-0.00356018705296076 0 -0.0295897104076912"
+      rpy="0 0.00735494507562639 1.57553186676683" />
+    <parent
+      link="link_f0" />
+    <child
+      link="link_f1" />
+    <axis
+      xyz="0.00735487876458208 0 -0.999972952513396" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_f2">
+    <inertial>
+      <origin
+        xyz="-0.0621869126831449 -0.00552705445111368 -0.0122606889438816"
+        rpy="0 0 0" />
+      <mass
+        value="0.0685863417275584" />
+      <inertia
+        ixx="1.06834942216338E-05"
+        ixy="-2.43901494963638E-05"
+        ixz="1.2200534061471E-15"
+        iyy="0.000187721407972068"
+        iyz="7.323083881873E-15"
+        izz="0.000197984783400055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_f2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_f2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_f2"
+    type="revolute">
+    <origin
+      xyz="-0.14929584922634 -0.00684999999999965 -0.0750112823209621"
+      rpy="0.00734380569224807 0.000404645478813979 -1.62583992006583" />
+    <parent
+      link="link_f1" />
+    <child
+      link="link_f2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.7925"
+      upper="2.7925"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_c">
+    <inertial>
+      <origin
+        xyz="0.0135932241877464 -0.0189428971458692 -0.0289065363202547"
+        rpy="0 0 0" />
+      <mass
+        value="1.23419712266341" />
+      <inertia
+        ixx="0.00105643825180223"
+        ixy="1.92456445351107E-10"
+        ixz="-2.35973808366867E-18"
+        iyy="0.00210036026968965"
+        iyz="4.16286459326396E-06"
+        izz="0.00196838169843624" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://warp_wraith_2/meshes/link_c.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_c"
+    type="continuous">
+    <origin
+      xyz="0 -0.0365235965231427 0.217558404353926"
+      rpy="-0.102085420819214 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_c" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+</robot>
