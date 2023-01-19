@@ -1,0 +1,337 @@
+<?xml version="1.0" ?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="warp_wraith_2">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="a">
+        <chain base_link="base_link" tip_link="link_a2" />
+    </group>
+    <group name="b">
+        <chain base_link="base_link" tip_link="link_b2" />
+    </group>
+    <group name="c">
+        <chain base_link="base_link" tip_link="link_c2" />
+    </group>
+    <group name="d">
+        <chain base_link="base_link" tip_link="link_d2" />
+    </group>
+    <group name="e">
+        <chain base_link="base_link" tip_link="link_e2" />
+    </group>
+    <group name="f">
+        <chain base_link="base_link" tip_link="link_f2" />
+    </group>
+    <group name="warp_wraith">
+        <group name="a" />
+        <group name="b" />
+        <group name="c" />
+        <group name="d" />
+        <group name="e" />
+        <group name="f" />
+    </group>
+    <group name="hanger">
+        <chain base_link="base_link" tip_link="link_c" />
+    </group>
+    <group name="abde">
+        <group name="a" />
+        <group name="b" />
+        <group name="d" />
+        <group name="e" />
+    </group>
+    <group name="bcef">
+        <group name="b" />
+        <group name="c" />
+        <group name="e" />
+        <group name="f" />
+    </group>
+    <group name="acdf">
+        <group name="a" />
+        <group name="c" />
+        <group name="d" />
+        <group name="f" />
+    </group>
+    <group name="ad">
+        <group name="a" />
+        <group name="d" />
+    </group>
+    <group name="be">
+        <group name="b" />
+        <group name="e" />
+    </group>
+    <group name="cf">
+        <group name="c" />
+        <group name="f" />
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="calibrate" group="warp_wraith">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="0" />
+        <joint name="joint_a2" value="0" />
+        <joint name="joint_b0" value="0" />
+        <joint name="joint_b1" value="0" />
+        <joint name="joint_b2" value="0" />
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="0" />
+        <joint name="joint_c2" value="0" />
+        <joint name="joint_d0" value="0" />
+        <joint name="joint_d1" value="0" />
+        <joint name="joint_d2" value="0" />
+        <joint name="joint_e0" value="0" />
+        <joint name="joint_e1" value="0" />
+        <joint name="joint_e2" value="0" />
+        <joint name="joint_f0" value="0" />
+        <joint name="joint_f1" value="0" />
+        <joint name="joint_f2" value="0" />
+    </group_state>
+    <group_state name="standing_default_1" group="warp_wraith">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="0" />
+        <joint name="joint_a2" value="0" />
+        <joint name="joint_b0" value="0.006" />
+        <joint name="joint_b1" value="1.62" />
+        <joint name="joint_b2" value="0.324" />
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="2.1754" />
+        <joint name="joint_c2" value="-1.5582" />
+        <joint name="joint_d0" value="-0.2623" />
+        <joint name="joint_d1" value="0" />
+        <joint name="joint_d2" value="0" />
+        <joint name="joint_e0" value="-0.5091" />
+        <joint name="joint_e1" value="-1.8051" />
+        <joint name="joint_e2" value="0.2623" />
+        <joint name="joint_f0" value="-0.4783" />
+        <joint name="joint_f1" value="-2.1445" />
+        <joint name="joint_f2" value="-1.4657" />
+    </group_state>
+    <group_state name="rotate_default" group="warp_wraith">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="2.2988" />
+        <joint name="joint_a2" value="-1.8051" />
+        <joint name="joint_b0" value="0.006" />
+        <joint name="joint_b1" value="2.1754" />
+        <joint name="joint_b2" value="-1.6817" />
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="2.1754" />
+        <joint name="joint_c2" value="-1.5891" />
+        <joint name="joint_d0" value="-0.2623" />
+        <joint name="joint_d1" value="-2.2062" />
+        <joint name="joint_d2" value="-1.8051" />
+        <joint name="joint_e0" value="-0.4783" />
+        <joint name="joint_e1" value="-2.1137" />
+        <joint name="joint_e2" value="-1.5891" />
+        <joint name="joint_f0" value="-0.4783" />
+        <joint name="joint_f1" value="-2.2988" />
+        <joint name="joint_f2" value="-1.6817" />
+    </group_state>
+    <group_state name="rotate_w_a" group="acdf">
+        <joint name="joint_a0" value="0.8485" />
+        <joint name="joint_a1" value="0.54" />
+        <joint name="joint_a2" value="-0.6634" />
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="2.1754" />
+        <joint name="joint_c2" value="-1.5891" />
+        <joint name="joint_d0" value="-1.1571" />
+        <joint name="joint_d1" value="-0.5091" />
+        <joint name="joint_d2" value="-0.7251" />
+        <joint name="joint_f0" value="-0.4783" />
+        <joint name="joint_f1" value="-2.2988" />
+        <joint name="joint_f2" value="-1.6817" />
+    </group_state>
+    <group_state name="rotate_w_b" group="abde">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="2.2679" />
+        <joint name="joint_a2" value="-1.8051" />
+        <joint name="joint_b0" value="0.756" />
+        <joint name="joint_b1" value="0.6326" />
+        <joint name="joint_b2" value="-0.6326" />
+        <joint name="joint_d0" value="-0.2623" />
+        <joint name="joint_d1" value="-2.2062" />
+        <joint name="joint_d2" value="-1.7434" />
+        <joint name="joint_e0" value="-0.8177" />
+        <joint name="joint_e1" value="-0.6326" />
+        <joint name="joint_e2" value="-0.5091" />
+    </group_state>
+    <group_state name="rotate_w_c" group="bcef">
+        <joint name="joint_b0" value="0" />
+        <joint name="joint_b1" value="2.1754" />
+        <joint name="joint_b2" value="-1.6817" />
+        <joint name="joint_c0" value="0.8485" />
+        <joint name="joint_c1" value="0.5091" />
+        <joint name="joint_c2" value="-0.2931" />
+        <joint name="joint_e0" value="-0.3548" />
+        <joint name="joint_e1" value="-2.1137" />
+        <joint name="joint_e2" value="-1.62" />
+        <joint name="joint_f0" value="-1.0337" />
+        <joint name="joint_f1" value="-0.6326" />
+        <joint name="joint_f2" value="-0.324" />
+    </group_state>
+    <group_state name="rotate_default_abde" group="abde">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="2.1754" />
+        <joint name="joint_a2" value="-1.8051" />
+        <joint name="joint_b0" value="0.006" />
+        <joint name="joint_b1" value="2.1754" />
+        <joint name="joint_b2" value="-1.6817" />
+        <joint name="joint_d0" value="-0.2623" />
+        <joint name="joint_d1" value="-2.2062" />
+        <joint name="joint_d2" value="-1.7742" />
+        <joint name="joint_e0" value="-0.4783" />
+        <joint name="joint_e1" value="-2.1137" />
+        <joint name="joint_e2" value="-1.5891" />
+    </group_state>
+    <group_state name="rotate_default_ad" group="ad">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="2.3605" />
+        <joint name="joint_a2" value="-1.8051" />
+        <joint name="joint_d0" value="-0.2623" />
+        <joint name="joint_d1" value="-2.2679" />
+        <joint name="joint_d2" value="-1.7742" />
+    </group_state>
+    <group_state name="rotate_default_be" group="be">
+        <joint name="joint_b0" value="0.006" />
+        <joint name="joint_b1" value="2.1754" />
+        <joint name="joint_b2" value="-1.6817" />
+        <joint name="joint_e0" value="-0.4783" />
+        <joint name="joint_e1" value="-2.1137" />
+        <joint name="joint_e2" value="-1.5891" />
+    </group_state>
+    <group_state name="rotate_default_cf" group="cf">
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="2.1754" />
+        <joint name="joint_c2" value="-1.5891" />
+        <joint name="joint_f0" value="-0.4783" />
+        <joint name="joint_f1" value="-2.2988" />
+        <joint name="joint_f2" value="-1.6817" />
+    </group_state>
+    <group_state name="rotate_w_a0" group="acdf">
+        <joint name="joint_a0" value="0.8485" />
+        <joint name="joint_a1" value="0.54" />
+        <joint name="joint_a2" value="-0.6634" />
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="1.188" />
+        <joint name="joint_c2" value="0.1389" />
+        <joint name="joint_d0" value="-1.1571" />
+        <joint name="joint_d1" value="-0.5181" />
+        <joint name="joint_d2" value="-0.7251" />
+        <joint name="joint_f0" value="-0.4783" />
+        <joint name="joint_f1" value="-1.188" />
+        <joint name="joint_f2" value="0.108" />
+    </group_state>
+    <group_state name="rotate_w_b0" group="abde">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="1.3731" />
+        <joint name="joint_a2" value="-0.0463" />
+        <joint name="joint_b0" value="0.756" />
+        <joint name="joint_b1" value="0.6326" />
+        <joint name="joint_b2" value="-0.6326" />
+        <joint name="joint_d0" value="-0.2623" />
+        <joint name="joint_d1" value="-1.392" />
+        <joint name="joint_d2" value="0.0154" />
+        <joint name="joint_e0" value="-0.8177" />
+        <joint name="joint_e1" value="-0.6326" />
+        <joint name="joint_e2" value="-0.5091" />
+    </group_state>
+    <group_state name="rotate_w_c0" group="bcef">
+        <joint name="joint_b0" value="0" />
+        <joint name="joint_b1" value="1.1571" />
+        <joint name="joint_b2" value="-0.0463" />
+        <joint name="joint_c0" value="0.8485" />
+        <joint name="joint_c1" value="0.5091" />
+        <joint name="joint_c2" value="-0.2931" />
+        <joint name="joint_e0" value="-0.3638" />
+        <joint name="joint_e1" value="-1.1571" />
+        <joint name="joint_e2" value="0.0154" />
+        <joint name="joint_f0" value="-1.0337" />
+        <joint name="joint_f1" value="-0.6326" />
+        <joint name="joint_f2" value="-0.324" />
+    </group_state>
+    <group_state name="rotate_default_bcef" group="bcef">
+        <joint name="joint_b0" value="0.006" />
+        <joint name="joint_b1" value="2.1754" />
+        <joint name="joint_b2" value="-1.6817" />
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="2.1754" />
+        <joint name="joint_c2" value="-1.5891" />
+        <joint name="joint_e0" value="-0.4783" />
+        <joint name="joint_e1" value="-2.1137" />
+        <joint name="joint_e2" value="-1.5891" />
+        <joint name="joint_f0" value="-0.4783" />
+        <joint name="joint_f1" value="-2.2988" />
+        <joint name="joint_f2" value="-1.6817" />
+    </group_state>
+    <group_state name="rotate_default_acdf" group="acdf">
+        <joint name="joint_a0" value="0" />
+        <joint name="joint_a1" value="2.2988" />
+        <joint name="joint_a2" value="-1.8051" />
+        <joint name="joint_c0" value="0" />
+        <joint name="joint_c1" value="2.1754" />
+        <joint name="joint_c2" value="-1.5891" />
+        <joint name="joint_d0" value="-0.2623" />
+        <joint name="joint_d1" value="-2.2062" />
+        <joint name="joint_d2" value="-1.8051" />
+        <joint name="joint_f0" value="-0.4783" />
+        <joint name="joint_f1" value="-2.2988" />
+        <joint name="joint_f2" value="-1.6817" />
+    </group_state>
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="dummy" type="floating" parent_frame="dummy" child_link="base_link" />
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="base_link" link2="link_a0" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_b0" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_c" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_c0" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_d0" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_e0" reason="Adjacent" />
+    <disable_collisions link1="base_link" link2="link_f0" reason="Adjacent" />
+    <disable_collisions link1="link_a0" link2="link_a1" reason="Adjacent" />
+    <disable_collisions link1="link_a0" link2="link_a2" reason="Never" />
+    <disable_collisions link1="link_a0" link2="link_b0" reason="Never" />
+    <disable_collisions link1="link_a0" link2="link_c0" reason="Never" />
+    <disable_collisions link1="link_a0" link2="link_d0" reason="Never" />
+    <disable_collisions link1="link_a0" link2="link_e0" reason="Never" />
+    <disable_collisions link1="link_a0" link2="link_e1" reason="Never" />
+    <disable_collisions link1="link_a0" link2="link_f0" reason="Never" />
+    <disable_collisions link1="link_a0" link2="link_f1" reason="Never" />
+    <disable_collisions link1="link_a1" link2="link_a2" reason="Adjacent" />
+    <disable_collisions link1="link_a1" link2="link_e0" reason="Never" />
+    <disable_collisions link1="link_a1" link2="link_f0" reason="Never" />
+    <disable_collisions link1="link_b0" link2="link_b1" reason="Adjacent" />
+    <disable_collisions link1="link_b0" link2="link_b2" reason="Never" />
+    <disable_collisions link1="link_b0" link2="link_c0" reason="Never" />
+    <disable_collisions link1="link_b0" link2="link_d0" reason="Never" />
+    <disable_collisions link1="link_b0" link2="link_d1" reason="Never" />
+    <disable_collisions link1="link_b0" link2="link_e0" reason="Never" />
+    <disable_collisions link1="link_b0" link2="link_f0" reason="Never" />
+    <disable_collisions link1="link_b0" link2="link_f1" reason="Never" />
+    <disable_collisions link1="link_b1" link2="link_b2" reason="Adjacent" />
+    <disable_collisions link1="link_b1" link2="link_d0" reason="Never" />
+    <disable_collisions link1="link_b1" link2="link_f0" reason="Never" />
+    <disable_collisions link1="link_c0" link2="link_c1" reason="Adjacent" />
+    <disable_collisions link1="link_c0" link2="link_c2" reason="Never" />
+    <disable_collisions link1="link_c0" link2="link_d0" reason="Never" />
+    <disable_collisions link1="link_c0" link2="link_d1" reason="Never" />
+    <disable_collisions link1="link_c0" link2="link_e0" reason="Never" />
+    <disable_collisions link1="link_c0" link2="link_e1" reason="Never" />
+    <disable_collisions link1="link_c0" link2="link_f0" reason="Never" />
+    <disable_collisions link1="link_c1" link2="link_c2" reason="Adjacent" />
+    <disable_collisions link1="link_c1" link2="link_d0" reason="Never" />
+    <disable_collisions link1="link_c1" link2="link_e0" reason="Never" />
+    <disable_collisions link1="link_d0" link2="link_d1" reason="Adjacent" />
+    <disable_collisions link1="link_d0" link2="link_d2" reason="Never" />
+    <disable_collisions link1="link_d0" link2="link_e0" reason="Never" />
+    <disable_collisions link1="link_d0" link2="link_f0" reason="Never" />
+    <disable_collisions link1="link_d1" link2="link_d2" reason="Adjacent" />
+    <disable_collisions link1="link_e0" link2="link_e1" reason="Adjacent" />
+    <disable_collisions link1="link_e0" link2="link_e2" reason="Never" />
+    <disable_collisions link1="link_e0" link2="link_f0" reason="Never" />
+    <disable_collisions link1="link_e1" link2="link_e2" reason="Adjacent" />
+    <disable_collisions link1="link_f0" link2="link_f1" reason="Adjacent" />
+    <disable_collisions link1="link_f0" link2="link_f2" reason="Never" />
+    <disable_collisions link1="link_f1" link2="link_f2" reason="Adjacent" />
+</robot>

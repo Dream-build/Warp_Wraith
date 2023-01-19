@@ -1,0 +1,149 @@
+controller_list:
+  - name: fake_a_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_a0
+      - joint_a1
+      - joint_a2
+  - name: fake_b_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_b0
+      - joint_b1
+      - joint_b2
+  - name: fake_c_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_c0
+      - joint_c1
+      - joint_c2
+  - name: fake_d_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_d0
+      - joint_d1
+      - joint_d2
+  - name: fake_e_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_e0
+      - joint_e1
+      - joint_e2
+  - name: fake_f_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_f0
+      - joint_f1
+      - joint_f2
+  - name: fake_warp_wraith_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_a0
+      - joint_a1
+      - joint_a2
+      - joint_b0
+      - joint_b1
+      - joint_b2
+      - joint_c0
+      - joint_c1
+      - joint_c2
+      - joint_d0
+      - joint_d1
+      - joint_d2
+      - joint_e0
+      - joint_e1
+      - joint_e2
+      - joint_f0
+      - joint_f1
+      - joint_f2
+  - name: fake_hanger_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_c
+  - name: fake_abde_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_a0
+      - joint_a1
+      - joint_a2
+      - joint_b0
+      - joint_b1
+      - joint_b2
+      - joint_d0
+      - joint_d1
+      - joint_d2
+      - joint_e0
+      - joint_e1
+      - joint_e2
+  - name: fake_bcef_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_b0
+      - joint_b1
+      - joint_b2
+      - joint_c0
+      - joint_c1
+      - joint_c2
+      - joint_e0
+      - joint_e1
+      - joint_e2
+      - joint_f0
+      - joint_f1
+      - joint_f2
+  - name: fake_acdf_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_a0
+      - joint_a1
+      - joint_a2
+      - joint_c0
+      - joint_c1
+      - joint_c2
+      - joint_d0
+      - joint_d1
+      - joint_d2
+      - joint_f0
+      - joint_f1
+      - joint_f2
+  - name: fake_ad_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_a0
+      - joint_a1
+      - joint_a2
+      - joint_d0
+      - joint_d1
+      - joint_d2
+  - name: fake_be_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_b0
+      - joint_b1
+      - joint_b2
+      - joint_e0
+      - joint_e1
+      - joint_e2
+  - name: fake_cf_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - joint_c0
+      - joint_c1
+      - joint_c2
+      - joint_f0
+      - joint_f1
+      - joint_f2
+initial:  # Define initial robot poses.
+  - group: warp_wraith
+    pose: calibrate
+  - group: abde
+    pose: rotate_w_b
+  - group: bcef
+    pose: rotate_w_c
+  - group: acdf
+    pose: rotate_w_a
+  - group: ad
+    pose: rotate_default_ad
+  - group: be
+    pose: rotate_default_be
+  - group: cf
+    pose: rotate_default_cf
